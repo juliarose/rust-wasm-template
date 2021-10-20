@@ -6,11 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "node server.js",
-    "build-wasm": "cargo build --target wasm32-unknown-unknown && wasm-pack build --release --target web"
+    "watch-serve": "nodemon server.js",
+    "build-wasm": "wasm-pack build --release --target web"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^2.0.14"
   }
 }
