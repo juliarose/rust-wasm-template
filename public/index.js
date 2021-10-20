@@ -5,10 +5,9 @@ const containerEl = document.getElementById('container');
 async function runWASM() {
   // Instantiate our wasm module
   const wasm = await init("/pkg/wasm_template_bg.wasm");
-  // Call the Add function export from wasm, save the result
-  const result = say_hello('beautiful');
+  // Call the wasm method
+  const result = say_hello('beautiful'); // Hello, beautiful!
   
-  // Set the result onto the body
   containerEl.textContent = result;
 };
 
